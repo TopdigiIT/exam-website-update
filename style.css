@@ -1,0 +1,560 @@
+/* -------------------------------Hero Section----------------------------- */
+.hero-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 90vh; 
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-text {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(253, 249, 249);
+    z-index: 10;
+    width: 100%;
+    padding: 0 20px; 
+    font-size: 35px;
+}
+
+
+
+
+/*------------------------------- Typewriter effect styling------------------- */
+.hero-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.typewriter h1 {
+    display: inline-block;
+    overflow: hidden; 
+    white-space: nowrap; 
+    border-right: 3px solid; 
+    animation: typing 4s steps(40, end), blink 0.75s step-end infinite;
+    font-size: 2rem;
+}
+
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+
+@keyframes blink {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: black;
+    }
+}
+
+
+/* Large Desktop (>= 1280px) */
+@media (min-width: 1280px) {
+    .typewriter h1 {
+        font-size: 2rem; 
+    }
+  }
+  
+  /* Laptop (>= 769px and < 1279px) */
+  @media (min-width: 769px) and (max-width: 1279px) {
+    .typewriter h1 {
+        font-size: 1.25rem; 
+    }
+  }
+  
+  /* Tablet (>= 481px and < 768px) */
+  @media (min-width: 481px) and (max-width: 768px) {
+    .typewriter h1 {
+        font-size: .8rem;
+    }
+  }
+  
+  /* Mobile (<= 767px) */
+  @media (max-width: 767px) {
+    .typewriter h1 {
+        font-size: 0.5rem; 
+    }
+  }
+
+
+/*-------------------------------- Offer Section Styling -------------------------*/
+.offer-section {
+    background-color: rgba(0, 0, 0, 0);
+    color: yellow; 
+    overflow: hidden;
+    position: hidden; 
+    width: 100%; 
+    white-space: nowrap; 
+    top: 0px; 
+    z-index: 1000; 
+    transition: opacity 1s ease-out; 
+}
+
+.offer-text {
+    display:inline-block; 
+    animation: move-left 25s linear infinite, flash 1s step-end infinite;
+    white-space: nowrap; 
+    padding-top: 65px;
+}
+
+@keyframes move-left {
+    0% {
+        transform: translateX(100vw); 
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes flash {
+    0%, 100% {
+        opacity: 1; 
+    }
+    75% {
+        opacity: .3; 
+    }
+}
+
+
+@media (max-width: 1200px) { /* --------------Laptop ---------------*/
+    .offer-text {
+        font-size: 16px; 
+        padding-top: 68px;
+    }
+}
+
+@media (max-width: 992px) { /*---------- Tablet -----------*/
+    .offer-text {
+        font-size: 14px;
+        padding-top: 65px;
+    }
+}
+
+@media (max-width: 768px) { /*---------------- Mobile Devices---------- */
+    .offer-text {
+        font-size: 12px; 
+        padding-top: 65px;
+    }
+}
+
+@media (max-width: 576px) { /*---------- Small Mobile Devices------------- */
+    .offer-section {
+        padding: 0px 0; 
+    }
+    .offer-text {
+        font-size: 10px; /* -----------------small mobile devices---------------- */
+        padding-top: 50px;
+    }
+}
+
+
+
+
+/* -------------------------------- About Me Section------------------------------- */
+.profile-image, .additional-image {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.profile-image:hover {
+    transform: scale(1.6);
+    z-index: 10; 
+}
+
+.profile-image:hover ~ .additional-image {
+    opacity: 0;
+    transform: scale(0.9); 
+}
+
+.additional-image:hover {
+    transform: scale(2.8);
+    z-index: 10;
+}
+
+
+
+
+/* ---------------------customer review section--------------------------------------- */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.customer-reviews {
+    padding: 50px 0px 50px 0px;
+    background-color: #dae9e0;
+    text-align: center;
+    border-top: 3px solid #f3080800;
+    overflow: hidden;
+    position: relative;
+}
+
+.customer-reviews h2 {
+    color: #333;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 2px;
+    margin-bottom: 70px;
+}
+
+.reviews-container {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    flex-wrap: nowrap;
+    animation: slide 20s linear infinite;
+    position: relative;
+    animation-play-state: running;
+}
+
+.review {
+    background-color: #f1c8ee;
+    padding: 10px; 
+    margin: 0; 
+    width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.5s ease; 
+    animation: zoomEffect 15s linear infinite;
+    animation-play-state: running; 
+}
+
+.customer-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review-content {
+    max-width: 250px;
+}
+
+.review-text {
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.star-rating {
+    color: #FFD700;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.reviewer {
+    font-size: 14px;
+    font-weight: semibold;
+    color: #272525;
+}
+
+
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes zoomEffect {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.7); 
+    }
+}
+
+
+.reviews-container:hover {
+    animation-play-state: paused; 
+}
+
+
+
+
+/* ---------------------------------News Letter Section------------------------------ */
+.newsletter-section {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    text-align: center;
+}
+.newsletter-heading {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+.newsletter-description {
+    font-size: 1.125rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.newsletter-input {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+.newsletter-button {
+    background-color: #6d28d9;
+    color: #fff;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.newsletter-button:hover {
+    background-color: #4c1d95;
+}
+
+
+
+/* -----------------------------------Footer Section-------------------------------------------- */
+.footer {
+    background-color: #459ce4;
+    color: #fff;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer .address {
+    flex: 1;
+    max-width: 300px;
+}
+
+.footer .address h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer .address p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.footer .middle-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    margin: 0 2rem;
+}
+
+.footer .middle-section img {
+    width: 6rem; 
+    height: 6rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    transition: transform 0.5s ease;
+}
+
+.footer .middle-section img:hover {
+    transform: scale(1.5);
+}
+
+.footer .middle-section p {
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.footer .social-section {
+    flex: 1;
+    max-width: 300px;
+    text-align: right;
+}
+
+.footer .social-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer .social-section p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer .social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin: 0;
+}
+
+.footer .social-icons li {
+    display: inline;
+}
+
+.footer .social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.footer .social-icons a:hover {
+    color: #caf50c;
+}
+
+.copyright {
+    background-color: #946eee;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.875rem;
+}
+
+.copyright a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.copyright a:hover {
+    color: #ddd;
+}
+
+
+
+
+
+
+/* ----------------------------Basic Swiper Container Styling------------------------- */
+.swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  
+  
+  .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill; 
+  }
+  
+  
+  .swiper-pagination,
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #fff;
+  }
+  
+  /* Large Desktop (>= 1280px------------------) */
+  @media (min-width: 1280px) {
+    .swiper-container {
+      height: 800px; 
+    }
+  }
+  
+  /* Laptop (>= 769px and < 1279px------------------) */
+  @media (min-width: 769px) and (max-width: 1279px) {
+    .swiper-container {
+      height: 50%;
+    }
+  }
+  
+  /* Tablet (>= 481px and < 768px--------------------) */
+  @media (min-width: 481px) and (max-width: 768px) {
+    .swiper-container {
+      height: auto; 
+    }
+  }
+  
+  /* Mobile (<= 767px------------------) */
+  @media (max-width: 767px) {
+    .swiper-container {
+      height: auto; 
+    }
+  }
+  
+
+  /* --------------------- For Contact Page----------------------- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.contact-image {
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.contact-image:hover {
+    transform: scale(1.1) rotate(6deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px #f39c12;
+    }
+    50% {
+        box-shadow: 0 0 20px #f39c12, 0 0 40px #f39c12, 0 0 60px #f39c12;
+    }
+    100% {
+        box-shadow: 0 0 5px #f39c12;
+    }
+}
+
+/*------------ More Product effect---------------- */
+.glowing-effect {
+    animation: glow 2s infinite;
+    transition: background-color 0.3s ease;
+}

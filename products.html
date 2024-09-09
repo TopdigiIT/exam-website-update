@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./ZZZ Logo Fevi.png" type="image/x-icon">
+    <title>MOMENUL-MERN Developer</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./style.css">
+    
+
+</head>
+<body class="bg-black">
+    <!----------------------------------------------- Header Section ------------------------------>
+    <header class="fixed top-0 left-0 w-full bg-blue-300 text-black shadow-md z-50">
+        <nav class="container mx-auto flex justify-between items-center py-1 px-4 md:px-8">
+        <div class="flex items-center">
+            <a href="#home" class="flex items-center">
+                <img src="./ZZZ Logo.png" alt="Logo" class="h-10 w-10 md:h-14 md:w-14 mr-2 md:mr-4">
+                <span class="text-xl md:text-1xl font-bold text-purple-800">MOMENUL.PRO</span>
+                </a>
+            </div>
+            <ul class="hidden md:flex space-x-4 lg:space-x-8">
+                <li>
+                <a href="./index.html" class="text-base md:text-lg font-semibold hover:text-yellow-400 transition duration-300 relative">Home
+                        <span class="block h-1 w-full bg-yellow-400 absolute left-0 bottom-0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./index.html#about" class="text-base md:text-lg font-semibold hover:text-yellow-400 transition duration-300 relative">About Us
+                        <span class="block h-1 w-full bg-yellow-400 absolute left-0 bottom-0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#products" class="text-base md:text-lg font-semibold hover:text-yellow-400 transition duration-300 relative">Products
+                        <span class="block h-1 w-full bg-yellow-400 absolute left-0 bottom-0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./Contact.html" class="text-base md:text-lg font-semibold hover:text-yellow-400 transition duration-300 relative">Contact Us
+                        <span class="block h-1 w-full bg-yellow-400 absolute left-0 bottom-0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                    </a>
+                </li>
+            </ul>
+
+    <!-------------------------- Mobile Menu Button ------------------------------->
+        <div class="md:hidden">
+            <button id="mobile-menu-button" class="text-blue-500 focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="md:hidden flex flex-col items-center bg-blue-300 w-full text-center hidden">
+            <a href="#home" class="py-2 text-base font-semibold hover:text-yellow-400 transition duration-300">Home</a>
+            <a href="#about" class="py-2 text-base font-semibold hover:text-yellow-400 transition duration-300">About Us</a>
+            <a href="./products.html" class="py-2 text-base font-semibold hover:text-yellow-400 transition duration-300">Products</a>
+            <a href="./Contact.html" class="py-2 text-base font-semibold hover:text-yellow-400 transition duration-300">Contact Us</a>
+        </div>
+
+    </header>
+    
+
+    <!-------------------- Offer Section -------------------->
+<div class="offer-section" id="offerSection">
+    <div class="offer-text">
+        <p>🔥 Special Offer: Use " ABRAR-MANHA " to Get 20% off on all services! Limited time only! 🔥</p>
+    </div>
+</div>
+
+
+
+<!-- -------------------------Product puchace section---------------- -->
+  <section class="purchase-info-section py-2 bg-gray-100 hover:bg-purple-200 shadow-xl transition-shadow duration-300">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">Product Purchase Information</h2>
+        <div class="flex flex-col items-center md:flex-row md:justify-around md:items-center">
+          <div class="purchase-info-card bg-white shadow-md rounded-lg p-6 mb-4 md:mb-0 md:w-1/3 text-center">
+            <h3 class="text-xl font-semibold text-blue-800 mb-2">Amount of Product Purchase:</h3>
+            <h2 id="purchase-quantity" class="bg-purple-600 text-white py-1 px-4 rounded">0</h2>
+          </div>
+          <div class="flex justify-center items-center mb-4 md:mb-0">
+            <button id="pay-now-btn" class="bg-green-600 text-white py-2 px-6 rounded hover:bg-green-700 transition duration-300">Pay Now</button>
+          </div>
+          <div class="purchase-info-card bg-white shadow-md rounded-lg p-6 mb-4 md:mb-0 md:w-1/3 text-center">
+            <h3 class="text-xl font-semibold text-blue-800 mb-2">Total Price:</h3>
+            <h2 id="total-price" class="bg-purple-600 text-white py-1 px-4 rounded">$0.00</h2>
+          </div>
+        </div>
+        <div class="payment-section mt-8 text-center">
+    <div class="payment-options grid grid-cols-3 gap-4 sm:flex sm:space-x-4 justify-center items-center">
+      <img src="./Paypal.png" alt="Paypal" class="h-8">
+      <img src="./Payonner.png" alt="Payoneer" class="h-8">
+      <img src="./Neteller.png" alt="Neteller" class="h-8">
+      <img src="./Skrill.png" alt="Skrill" class="h-8">
+      <img src="./Visa.png" alt="Visa" class="h-8">
+      <img src="./Master Card.png" alt="MasterCard" class="h-8">
+      <img src="./Bkash.png" alt="Bkash" class="h-8">
+      <img src="./Nagot.png" alt="Nagot" class="h-8">
+      <img src="./Rocket.png" alt="Rocket" class="h-8">
+    </div>
+  </div>
+  
+    </div>
+</section>
+
+
+<!--------------------------------- Product Section --------------------------------------------->
+<section id="products" class="py-6 bg-white">
+    <div class="container mx-auto px-14">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Our Products</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Product 1 ----------------------------------->
+            <div class="bg-white shadow-md rounded-lg p-6 flex flex-col items-center border border-blue-300 hover:bg-purple-200 shadow-xl transition-shadow duration-300">
+                <div class="overflow-hidden rounded-t-lg">
+                    <img src="./Web Site Design.png" alt="Product 1" class="w-full h-66 object-cover rounded-t-lg transform transition-transform duration-500 hover:scale-150">
+                </div>
+                <h3 class="bg-yellow-300 p-4 w-full mt-4 rounded-lg text-2xl font-semibold mt-4 text-center text-blue-800 hover:bg-blue-300 transition duration-300 hover:text-black transition duration-300">Responsive Website Design</h3>
+                <div class="mx-auto px-1 text-l">
+                    <p class="text-gray-800 mt-2 text-justify">Transform your online presence with a responsive website that adapts seamlessly to all devices. Our designs ensure an optimal user experience, improving engagement, accessibility, and overall satisfaction. Whether viewed on a smartphone, tablet, or desktop, your website will look stunning and function flawlessly. Elevate your brand and reach a wider audience with a site that’s modern, user-friendly, and tailored to your unique needs.</p>
+                </div>
+                <div class="bg-yellow-300 p-4 w-full mt-4 rounded-b-lg flex items-center justify-between hover:bg-blue-300 transition duration-300">
+                    <p class="text-l font-bold text-purple-800" data-product-price="199">Starting from: $199</p>
+                    <button class="bg-purple-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300 order-btn">Order Now</button>
+                </div>
+            </div>
+            <!-- Product 2 -------------------------------->
+            <div class="bg-white shadow-md rounded-lg p-6 flex flex-col items-center border border-blue-300 hover:bg-purple-200 shadow-xl transition-shadow duration-300">
+                <div class="overflow-hidden rounded-t-lg">
+                    <img src="./Web Development.png" alt="Product 1" class="w-full h-66 object-cover rounded-t-lg transform transition-transform duration-500 hover:scale-150">
+                </div>
+                <h3 class="bg-yellow-300 p-4 w-full mt-4 rounded-lg text-2xl font-semibold mt-4 text-center text-blue-800 hover:bg-blue-300 transition duration-300 hover:text-black transition duration-300">Web Development</h3>
+                <div class="mx-auto px-1 text-l">
+                    <p class="text-gray-800 mt-2 text-justify">Build a powerful and dynamic online presence with our expert web development services. From front-end design to back-end functionality, we create responsive, fast, and secure websites tailored to your business needs. Our development solutions enhance user experience, drive engagement, and boost conversions. Whether it’s an e-commerce platform, a corporate site, or a personal blog, we ensure your website is optimized, scalable.</p>
+                </div>
+                <div class="bg-yellow-300 p-4 w-full mt-4 rounded-b-lg flex items-center justify-between hover:bg-blue-300 transition duration-300">
+                    <p class="text-l font-bold text-purple-800" data-product-price="249">Starting from: $249</p>
+                    <button class="bg-purple-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300 order-btn">Order Now</button>
+                </div>
+            </div>
+            <!-- Product 3 ------------------------------------------------->
+            <div class="bg-white shadow-md rounded-lg p-6 flex flex-col items-center border border-blue-300 hover:bg-purple-200 shadow-xl transition-shadow duration-300">
+                <div class="overflow-hidden rounded-t-lg">
+                    <img src="./Add Campaign.png" alt="Product 1" class="w-full h-66 object-cover rounded-t-lg transform transition-transform duration-500 hover:scale-150">
+                </div>
+                <h3 class="bg-yellow-300 p-4 w-full mt-4 rounded-lg text-2xl font-semibold mt-4 text-center text-blue-800 hover:bg-blue-300 transition duration-300 hover:text-black transition duration-300">Ads Campaign</h3>
+                <div class="mx-auto px-1 text-l">
+                    <p class="text-gray-800 mt-2 text-justify">Boost your brand's visibility with our strategic ad campaigns. We create targeted ads tailored to your audience, driving engagement and maximizing conversions across platforms like Google and social media. Our data-driven approach ensures optimal performance, increasing traffic and generating quality leads. Let us help you connect with customers and grow your business with effective, impactful advertising solutions.</p>
+                </div>
+                <div class="bg-yellow-300 p-4 w-full mt-4 rounded-b-lg flex items-center justify-between hover:bg-blue-300 transition duration-300">
+                    <p class="text-l font-bold text-purple-800" data-product-price="199">Starting from: $199</p>
+                    <button class="bg-purple-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300 order-btn">Order Now</button>
+                </div>
+            </div>
+            <!-- Product 4 ------------------------------------------------->
+            <div class="bg-white shadow-md rounded-lg p-6 flex flex-col items-center border border-blue-300 hover:bg-purple-200 shadow-xl transition-shadow duration-300">
+                <div class="overflow-hidden rounded-t-lg">
+                    <img src="./Social Media.png" alt="Product 1" class="w-full h-66 object-cover rounded-t-lg transform transition-transform duration-500 hover:scale-150">
+                </div>
+                <h3 class="bg-yellow-300 p-4 w-full mt-4 rounded-lg text-2xl font-semibold mt-4 text-center text-blue-800 hover:bg-blue-300 transition duration-300 hover:text-black transition duration-300">Social Media Management</h3>
+                <div class="mx-auto px-1 text-l">
+                    <p class="text-gray-800 mt-2 text-justify">Enhance your online presence with our social media management services. We craft engaging content, manage your accounts, and drive community growth on platforms like Facebook, Instagram, and Twitter. Our strategies boost brand awareness, improve engagement, and increase conversions. Let us handle your social media while you focus on growing your business and connecting with your audience.</p>
+                </div>
+                <div class="bg-yellow-300 p-4 w-full mt-4 rounded-b-lg flex items-center justify-between hover:bg-blue-300 transition duration-300">
+                    <p class="text-l font-bold text-purple-800" data-product-price="199">Starting from: $199</p>
+                    <button class="bg-purple-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300 order-btn">Order Now</button>
+                </div>
+            </div>
+            <!-- Product 5 ------------------------------------------------->
+            <div class="bg-white shadow-md rounded-lg p-6 flex flex-col items-center border border-blue-300 hover:bg-purple-200 shadow-xl transition-shadow duration-300">
+                <div class="overflow-hidden rounded-t-lg">
+                    <img src="./Digital Marketing.png" alt="Product 1" class="w-full h-66 object-cover rounded-t-lg transform transition-transform duration-500 hover:scale-150">
+                </div>
+                <h3 class="bg-yellow-300 p-4 w-full mt-4 rounded-lg text-2xl font-semibold mt-4 text-center text-blue-800 hover:bg-blue-300 transition duration-300 hover:text-black transition duration-300">Digital Marketing Analytics</h3>
+                <div class="mx-auto px-1 text-l">
+                    <p class="text-gray-800 mt-2 text-justify">We analyze your digital marketing efforts to pinpoint what works and what doesn’t. Using data tracking and performance evaluation, we provide actionable insights and recommendations to optimize your strategy. Our approach helps you understand your audience, improve ROI, and focus on effective tactics. Make smarter decisions and enhance your marketing success with our expert analytics services.</p>
+                </div>
+                <div class="bg-yellow-300 p-4 w-full mt-4 rounded-b-lg flex items-center justify-between hover:bg-blue-300 transition duration-300">
+                    <p class="text-l font-bold text-purple-800" data-product-price="199">Starting from: $199</p>
+                    <button class="bg-purple-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300 order-btn">Order Now</button>
+                </div>
+            </div>
+             <!-- Product 6 ------------------------------------------------>
+             <div class="bg-white shadow-md rounded-lg p-6 flex flex-col items-center border border-blue-300 hover:bg-purple-200 shadow-xl transition-shadow duration-300">
+                <div class="overflow-hidden rounded-t-lg">
+                    <img src="./Logo Design.png" alt="Product 1" class="w-full h-66 object-cover rounded-t-lg transform transition-transform duration-500 hover:scale-150">
+                </div>
+                <h3 class="bg-yellow-300 p-4 w-full mt-4 rounded-lg text-2xl font-semibold mt-4 text-center text-blue-800 hover:bg-blue-300 transition duration-300 hover:text-black transition duration-300">logo Design</h3>
+                <div class="mx-auto px-1 text-l">
+                    <p class="text-gray-800 mt-2 text-justify"> Make a lasting impression with a custom logo that perfectly represents your brand. We create unique, professional logos that capture your business's essence and stand out from the competition. Our designs are crafted for versatility, ensuring they look exceptional across all platforms and mediums. From initial concept to final creation, we focus on delivering a logo that truly reflects your brand's identity and leaves a powerful impact.</p>
+                </div>
+                <div class="bg-yellow-300 p-4 w-full mt-4 rounded-b-lg flex items-center justify-between hover:bg-blue-300 transition duration-300">
+                    <p class="text-l font-bold text-purple-800" data-product-price="199">Starting from: $199</p>
+                    <button class="bg-purple-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300 order-btn">Order Now</button>
+                </div>
+            </div>
+            <!-- Product 7 ------------------------------------------------->
+            <div class="bg-white shadow-md rounded-lg p-6 flex flex-col items-center border border-blue-300 hover:bg-purple-200 shadow-xl transition-shadow duration-300">
+                <div class="overflow-hidden rounded-t-lg">
+                    <img src="./Web Site Design.png" alt="Product 1" class="w-full h-66 object-cover rounded-t-lg transform transition-transform duration-500 hover:scale-150">
+                </div>
+                <h3 class="bg-yellow-300 p-4 w-full mt-4 rounded-lg text-2xl font-semibold mt-4 text-center text-blue-800 hover:bg-blue-300 transition duration-300 hover:text-black transition duration-300">Responsive Website Design</h3>
+                <div class="mx-auto px-1 text-l">
+                    <p class="text-gray-800 mt-2 text-justify">Transform your online presence with a responsive website that adapts seamlessly to all devices. Our designs ensure an optimal user experience, improving engagement, accessibility, and overall satisfaction. Whether viewed on a smartphone, tablet, or desktop, your website will look stunning and function flawlessly. Elevate your brand and reach a wider audience with a site that’s modern, user-friendly, and tailored to your unique needs.</p>
+                </div>
+                <div class="bg-yellow-300 p-4 w-full mt-4 rounded-b-lg flex items-center justify-between hover:bg-blue-300 transition duration-300">
+                    <p class="text-l font-bold text-purple-800" data-product-price="199">Starting from: $199</p>
+                    <button class="bg-purple-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300 order-btn">Order Now</button>
+                </div>
+            </div>
+            <!-- Product 8 ------------------------------------------------>
+            <div class="bg-white shadow-md rounded-lg p-6 flex flex-col items-center border border-blue-300 hover:bg-purple-200 shadow-xl transition-shadow duration-300">
+                <div class="overflow-hidden rounded-t-lg">
+                    <img src="./Web Site Design.png" alt="Product 1" class="w-full h-66 object-cover rounded-t-lg transform transition-transform duration-500 hover:scale-150">
+                </div>
+                <h3 class="bg-yellow-300 p-4 w-full mt-4 rounded-lg text-2xl font-semibold mt-4 text-center text-blue-800 hover:bg-blue-300 transition duration-300 hover:text-black transition duration-300">Responsive Website Design</h3>
+                <div class="mx-auto px-1 text-l">
+                    <p class="text-gray-800 mt-2 text-justify">Transform your online presence with a responsive website that adapts seamlessly to all devices. Our designs ensure an optimal user experience, improving engagement, accessibility, and overall satisfaction. Whether viewed on a smartphone, tablet, or desktop, your website will look stunning and function flawlessly. Elevate your brand and reach a wider audience with a site that’s modern, user-friendly, and tailored to your unique needs.</p>
+                </div>
+                <div class="bg-yellow-300 p-4 w-full mt-4 rounded-b-lg flex items-center justify-between hover:bg-blue-300 transition duration-300">
+                    <p class="text-l font-bold text-purple-800" data-product-price="199">Starting from: $199</p>
+                    <button class="bg-purple-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300 order-btn">Order Now</button>
+                </div>
+            </div>
+            <!-- Product 9 ------------------------------------------------>
+            <div class="bg-white shadow-md rounded-lg p-6 flex flex-col items-center border border-blue-300 hover:bg-purple-200 shadow-xl transition-shadow duration-300">
+                <div class="overflow-hidden rounded-t-lg">
+                    <img src="./Web Site Design.png" alt="Product 1" class="w-full h-66 object-cover rounded-t-lg transform transition-transform duration-500 hover:scale-150">
+                </div>
+                <h3 class="bg-yellow-300 p-4 w-full mt-4 rounded-lg text-2xl font-semibold mt-4 text-center text-blue-800 hover:bg-blue-300 transition duration-300 hover:text-black transition duration-300">Responsive Website Design</h3>
+                <div class="mx-auto px-1 text-l">
+                    <p class="text-gray-800 mt-2 text-justify">Transform your online presence with a responsive website that adapts seamlessly to all devices. Our designs ensure an optimal user experience, improving engagement, accessibility, and overall satisfaction. Whether viewed on a smartphone, tablet, or desktop, your website will look stunning and function flawlessly. Elevate your brand and reach a wider audience with a site that’s modern, user-friendly, and tailored to your unique needs.</p>
+                </div>
+                <div class="bg-yellow-300 p-4 w-full mt-4 rounded-b-lg flex items-center justify-between hover:bg-blue-300 transition duration-300">
+                    <p class="text-l font-bold text-purple-800" data-product-price="199">Starting from: $199</p>
+                    <button class="bg-purple-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300 order-btn">Order Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- ------------------------------------------Footer Section-------------------------------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <footer class="footer">
+        <div class="address">
+            <h2>Our Address:</h2>
+            <p>Ashulia,<br>
+            Savar,<br>
+            Dhaka-1349,<br>
+            Bangladesh</p>
+    </div>
+    <div class="middle-section">
+        <img src="./ZZZ Logo.png" alt="logo" class="logo">
+        <p>We are dedicated to providing top-notch services to help your business thrive.</p>
+    </div>
+    <div class="social-section">
+        <h2>Stay Connected:</h2>
+        <p>Follow us on social media for the latest updates and news.</p>
+        <ul class="social-icons">
+            <li><a href="https://facebook.com/yourprofile" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://twitter.com/yourprofile" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a href="https://instagram.com/yourprofile" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+    </div>
+</footer>
+
+<!------------------- Copyright Section -------------------------------->
+<div class="copyright hover:bg-purple-500">
+    Copyright 2024, <a href="https://momenul.pro">MOMENUL.PRO</a>. All Rights Reserved.
+</div>
+<!-------------------- Include Swiper JS ------------------>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./swiper.js"></script>
+    <script src="./Product.js"></script>
+</body>
+</html>
