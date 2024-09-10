@@ -11,7 +11,7 @@
     
 
 </head>
-<body class="bg-black">
+<body class="bg-purple-500">
     <!-- ----------------------------------Header Section------------------------------------------------------------------ -->
     <header class="fixed top-0 left-0 w-full bg-blue-300 text-black shadow-md z-50">
         <nav class="container mx-auto flex justify-between items-center py-1 px-4 md:px-8">
@@ -138,7 +138,7 @@
                 </div>
                 <h3 class="bg-yellow-300 p-4 w-full mt-4 rounded-lg text-2xl font-semibold mt-4 text-center text-blue-800 hover:bg-blue-300 transition duration-300 hover:text-black transition duration-300">Ads Campaign</h3>
                 <div class="mx-auto px-1 text-l">
-                    <p class="text-gray-800 mt-2 text-justify">Boost your brand's visibility with our strategic ad campaigns. We create targeted ads tailored to your audience, driving engagement and maximizing conversions across platforms like Google and social media. Our data-driven approach ensures optimal performance, increasing traffic and generating quality leads. Let us help you connect with customers and grow your business with effective, impactful advertising solutions.</p>
+                    <p class="text-gray-800 mt-2 text-justify">Boost your brand's visibility with our strategic ads campaigns. We create targeted ads tailored to your audience, driving engagement and maximizing conversions across platforms like Google and social media. Our data-driven approach ensures optimal performance, increasing traffic and generating quality leads. Let us help you connect with customers and grow your business with effective, impactful advertising solutions. Don't waste your time, order now!</p>
                 </div>
                 <div class="bg-yellow-300 p-4 w-full mt-4 rounded-b-lg flex items-center justify-between hover:bg-blue-300 transition duration-300">
                     <p class="text-xl font-bold text-purple-800">Starting from: $99</p>
@@ -152,7 +152,7 @@
                 </div>
                 <h3 class="bg-yellow-300 p-4 w-full mt-4 rounded-lg text-2xl font-semibold mt-4 text-center text-blue-800 hover:bg-blue-300 transition duration-300 hover:text-black transition duration-300">Social Media Management</h3>
                 <div class="mx-auto px-1 text-l">
-                    <p class="text-gray-800 mt-2 text-justify">Enhance your online presence with our social media management services. We craft engaging content, manage your accounts, and drive community growth on platforms like Facebook, Instagram, and Twitter. Our strategies boost brand awareness, improve engagement, and increase conversions. Let us handle your social media while you focus on growing your business and connecting with your audience.</p>
+                    <p class="text-gray-800 mt-2 text-justify">Enhance your online presence with our social media management services. We craft engaging content, manage your accounts, and drive community growth on platforms like Facebook, Instagram, and Twitter. Our strategies boost brand awareness, improve engagement, and increase conversions. Let us handle your social media while you focus on growing your business and connecting with your audience. Don't waste your time, order now!</p>
                 </div>
                 <div class="bg-yellow-300 p-4 w-full mt-4 rounded-b-lg flex items-center justify-between hover:bg-blue-300 transition duration-300">
                     <p class="text-xl font-bold text-purple-800">Starting from: $99</p>
@@ -166,7 +166,7 @@
                 </div>
                 <h3 class="bg-yellow-300 p-4 w-full mt-4 rounded-lg text-2xl font-semibold mt-4 text-center text-blue-800 hover:bg-blue-300 transition duration-300 hover:text-black transition duration-300">Digital Marketing Analytics</h3>
                 <div class="mx-auto px-1 text-l">
-                    <p class="text-gray-800 mt-2 text-justify">We analyze your digital marketing efforts to pinpoint what works and what doesn’t. Using data tracking and performance evaluation, we provide actionable insights and recommendations to optimize your strategy. Our approach helps you understand your audience, improve ROI, and focus on effective tactics. Make smarter decisions and enhance your marketing success with our expert analytics services.</p>
+                    <p class="text-gray-800 mt-2 text-justify">We analyze your digital marketing efforts to pinpoint what works and what doesn’t. Using data tracking and performance evaluation, we provide actionable insights and recommendations to optimize your strategy. Our approach helps you understand your audience, improve ROI, and focus on effective tactics. Make smarter decisions and enhance your marketing success with our expert analytics services. Don't waste your time, order now!</p>
                 </div>
                 <div class="bg-yellow-300 p-4 w-full mt-4 rounded-b-lg flex items-center justify-between hover:bg-blue-300 transition duration-300">
                     <p class="text-xl font-bold text-purple-800">Starting from: $79</p> 
@@ -216,7 +216,7 @@
                     My mission is to deliver exceptional value to my clients through personalized solutions that drive growth and success. Let's work together to turn your ideas into reality!
                 </p>
             <div class="text-center md:text-left">
-                    <a href="#contact" class="bg-purple-600 text-white py-3 px-6 rounded hover:bg-purple-700 transition duration-300">Get in Touch</a>
+                    <a href="./Contact.html" class="bg-purple-600 text-white py-3 px-6 rounded hover:bg-purple-700 transition duration-300">Get in Touch</a>
                 </div>
             </div>
         </div>
@@ -382,5 +382,32 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./swiper.js"></script>
 
+
+
+<!-- -----------------------Scroll Top Button---------------------------------------------- -->
+    <button id="scrollTopButton" class="fixed bottom-5 right-5 p-3 rounded-t-full bg-purple-700 text-white shadow-md hover:bg-blue-700 :outline-none">
+        ↑
+      </button>
+      <script>
+        const scrollTopButton = document.getElementById('scrollTopButton');
+      
+        window.onscroll = function () {
+          if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            scrollTopButton.style.display = 'block';
+          } else {
+            scrollTopButton.style.display = 'none';
+          }
+        };
+      
+        scrollTopButton.onclick = function () {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+      </script>
+
+
+<!------------------------------ Include Swiper JS -------------------->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="./script.js"></script>
+      
 </body>
 </html>

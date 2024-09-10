@@ -100,7 +100,7 @@
 /*-------------------------------- Offer Section Styling -------------------------*/
 .offer-section {
     background-color: rgba(0, 0, 0, 0);
-    color: yellow; 
+    color: rgb(252, 236, 10); 
     overflow: hidden;
     position: hidden; 
     width: 100%; 

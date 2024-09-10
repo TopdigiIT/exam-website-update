@@ -11,7 +11,7 @@
     
 
 </head>
-<body class="bg-black">
+<body class="bg-purple-500">
 
     <!------------------------------- Header Section -------------------------------------->
     <header class="fixed top-0 left-0 w-full bg-blue-300 text-black shadow-md z-50">
@@ -152,9 +152,30 @@
     Copyright 2024, <a href="https://momenul.pro">MOMENUL.PRO</a>. All Rights Reserved.
 </div>
 
+
+<!-- -----------------------Scroll Top Button---------------------------------------------- -->
+<button id="scrollTopButton" class="fixed bottom-5 right-5 p-3 rounded-t-full bg-purple-700 text-white shadow-md hover:bg-blue-700 :outline-none">
+    ↑
+  </button>
+  <script>
+    const scrollTopButton = document.getElementById('scrollTopButton');
+  
+    window.onscroll = function () {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollTopButton.style.display = 'block';
+      } else {
+        scrollTopButton.style.display = 'none';
+      }
+    };
+  
+    scrollTopButton.onclick = function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  </script>
+
 <!------------------- Include Swiper JS ------------------------->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="./swiper.js"></script>
+    <script src="./script.js"></script>
 
 </body>
 </html>
